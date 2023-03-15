@@ -15,7 +15,7 @@ Here are some issues reported in the community related to this workaround:
 Clone this project:
 
 ```
-git clone https://github.com/gitprelimtek/protobuf-javalite-firebase-wellknowntypes.git
+git clone https://github.com/kamalh16/protobuf-javalite-firebase-wellknowntypes.git
 ```
 
 ** If you have special version requirements, edit the pom.xml file to reflect the artifact versions you require. **
@@ -37,10 +37,10 @@ protobuf-javalite extracted OK
 proto-google-common-protos extracted OK 
 protolite-well-known-types extracted OK 
 classes extracted OK 
-ptek-protobuf-javalite-firebase-wellknowntypes.jar created OK 
+anura-protobuf-javalite-firebase-wellknowntypes.jar created OK 
 ```
 
-ptek-protobuf-javalite-firebase-wellknowntypes.jar can be found in output dir.
+anura-protobuf-javalite-firebase-wellknowntypes.jar can be found in output dir.
 
 
 If successful fatjar will be in output directory.
@@ -61,13 +61,16 @@ configurations {
  }
 ```
 
-Add the fatjar artifact in 
+Add the fatjar artifact in dependencies using either of the following lines, if you have both then the .jar file will be included twice and cause a conflict error.
 ```
 dependencies {
-  implementation 'com.google.firebase:firebase-firestore:21.4.0'
-  ..
-  ..
-  implementation files('libs/ptek-protobuf-javalite-firebase-wellknowntypes.jar')
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+```
+OR:
+```
+dependencies {
+  implementation files('libs/anura-protobuf-javalite-firebase-wellknowntypes.jar')
 }
 ```
 

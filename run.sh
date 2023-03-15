@@ -87,7 +87,7 @@ proc_wellknowntypes
 
 
 ## create the output jar from extracted
-jar cf $OUTPUT/ptek-protobuf-javalite-firebase-wellknowntypes.jar  * && echo "ptek-protobuf-javalite-firebase-wellknowntypes.jar created OK " || ( echo "ptek-protobuf-javalite-firebase-wellknowntypes.jar create failed. Exiting"; exit 1 )
+jar cf $OUTPUT/anura-protobuf-javalite-firebase-wellknowntypes.jar  * && echo "anura-protobuf-javalite-firebase-wellknowntypes.jar created OK " || ( echo "anura-protobuf-javalite-firebase-wellknowntypes.jar create failed. Exiting"; exit 1 )
 
 ls -l $OUTPUT
 
