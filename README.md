@@ -1,3 +1,5 @@
+# This is outdated, update to the latest protobuf version and this should be resolved. Version `3.19.3` onwards seems to have the fix.
+
 ## firestore and inappmessaging protobuf dependecy with protobuf-java artifacts
 
 This repo is in response to issues encountered when transitioning to firebase firestore and inappmessaging. 
